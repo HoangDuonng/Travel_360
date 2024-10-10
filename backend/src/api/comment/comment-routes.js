@@ -8,6 +8,7 @@ const commentController = require("./comment-controller");
 const ensuredAuthenticated = require("../../middleware/verifyJWT");
 
 router
+  //:blogId/add Truyền thêm blogId vào URL để qua bên controller lấy ra blogId
   .route("/add")
   .post(
     validationRules(),

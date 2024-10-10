@@ -4,6 +4,8 @@ const addOne = async (req, res) => {
   try {
     const newRecord = new Comment({
       ...req.body,
+      // Cmt thêm vào blog nào ở đây
+      // const blogId = req.params.blogId;
       createdBy: req.user._id,
     });
     await newRecord.save();

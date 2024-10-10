@@ -22,6 +22,8 @@ const createBlog = async (req, res) => {
         success: false,
       });
     }
+
+    console.log("User info:", req.user);
     // Create a new blog
     const newBlog = new Blog({
       ...req.body,
@@ -36,6 +38,7 @@ const createBlog = async (req, res) => {
       success: true,
     });
   } catch (error) {
+    console.error(error);
     return res.status(500).json({
       message: "Server error",
       success: false,

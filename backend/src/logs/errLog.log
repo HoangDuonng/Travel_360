@@ -63,3 +63,4 @@
 20241010	17:50:05	a35a71e9-4f4e-4078-b486-65f1a2764bd6	Error: ENOENT: no such file or directory, stat 'D:\Workspace\Chuyên đề CNTT\backend\src\views\404.html'	GET	/api/v1	undefined
 20241010	17:51:19	b04f9539-b8bf-4388-b4a5-5cf76243abe8	Error: ENOENT: no such file or directory, stat 'D:\Workspace\Chuyên đề CNTT\backend\src\views\404.html'	GET	/blogs	undefined
 20241010	17:51:55	711acb03-fa19-4282-b878-e0b43dd1928f	Error: ENOENT: no such file or directory, stat 'D:\Workspace\Chuyên đề CNTT\backend\src\views\404.html'	GET	/getBlogs	undefined
+20241011	00:57:19	8754aafc-dd4a-488f-b5bd-5fd4848b33f7	ReferenceError: user is not defined	POST	/api/v1/blogs/addBlog	undefined
