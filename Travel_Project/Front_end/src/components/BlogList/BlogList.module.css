@@ -1,0 +1,35 @@
+/* src/components/Admin/BlogList/BlogList.module.css */
+.container {
+    margin-top: 20px;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table th,
+.table td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;
+    color: black;
+}
+
+.table th {
+    background-color: #f4f4f4; /* Màu nền cho tiêu đề bảng */
+}
+
+button {
+    margin: 5px; /* Khoảng cách giữa các nút */
+    padding: 5px 10px; /* Padding cho nút */
+    border: none;
+    background-color: transparent; /* Màu nền cho nút */
+    color: rgb(0, 0, 0); /* Màu chữ cho nút */
+    border-radius: 4px; /* Bo góc cho nút */
+    cursor: pointer; /* Con trỏ khi hover qua nút */
+}
+
+button:hover {
+    background-color: #0056b3; /* Màu nền khi hover qua nút */
+}

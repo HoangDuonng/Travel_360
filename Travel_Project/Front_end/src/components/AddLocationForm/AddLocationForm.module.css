@@ -1,0 +1,52 @@
+/* src/components/Admin/AddLocationForm/AddLocationForm.module.css */
+.form {
+    background-color: #f8f9fa; /* Màu nền nhẹ */
+    padding: 20px; /* Padding cho form */
+    border-radius: 8px; /* Bo góc cho form */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Đổ bóng cho form */
+    max-width: 500px; /* Chiều rộng tối đa cho form */
+    margin: 20px auto; /* Đặt form giữa trang */
+}
+
+h2 {
+    margin-bottom: 20px; /* Khoảng cách dưới tiêu đề */
+    font-size: 24px; /* Kích thước chữ tiêu đề */
+    color: #333; /* Màu chữ tiêu đề */
+}
+
+label {
+    display: block; /* Hiển thị label thành khối */
+    margin-bottom: 5px; /* Khoảng cách dưới label */
+    font-weight: bold; /* Độ đậm của chữ */
+    color: black;
+}
+
+input,
+textarea,
+input[type="file"] {
+    width: 100%; /* Chiều rộng 100% */
+    padding: 10px; /* Padding cho các trường nhập */
+    margin-bottom: 15px; /* Khoảng cách dưới mỗi trường */
+    border: 1px solid #ccc; /* Viền cho các trường */
+    border-radius: 4px; /* Bo góc cho các trường */
+    font-size: 16px; /* Kích thước chữ */
+}
+
+textarea {
+    height: 100px; /* Chiều cao cho trường mô tả */
+    resize: none; /* Không cho phép thay đổi kích thước */
+}
+
+button {
+    background-color: #007bff; /* Màu nền cho nút */
+    color: black; /* Màu chữ cho nút */
+    border: none; /* Không viền */
+    padding: 10px 15px; /* Padding cho nút */
+    border-radius: 4px; /* Bo góc cho nút */
+    cursor: pointer; /* Con trỏ khi hover qua nút */
+    transition: background-color 0.3s; /* Hiệu ứng chuyển màu */
+}
+
+button:hover {
+    background-color: #0056b3; /* Màu nền khi hover */
+}

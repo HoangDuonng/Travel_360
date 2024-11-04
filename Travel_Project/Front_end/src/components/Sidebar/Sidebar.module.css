@@ -1,0 +1,45 @@
+.sidebar {
+    font-family: Arial, sans-serif; /* Phông chữ cho sidebar */
+    background-color: #343a40; /* Màu nền tối */
+    color: white; /* Màu chữ trắng */
+    width: 200px; /* Chiều rộng của sidebar */
+    height: 100vh; /* Chiều cao đầy đủ */
+    padding: 20px; /* Khoảng cách bên trong */
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.3); /* Đổ bóng cho sidebar */
+    position: fixed; /* Đặt sidebar cố định */
+}
+
+.sidebar h2 {
+    color: white;
+    margin-bottom: 20px; /* Khoảng cách dưới tiêu đề */
+    font-size: 24px; /* Kích thước chữ tiêu đề */
+    font-weight: bold; /* Chữ đậm cho tiêu đề */
+    text-align: center; /* Canh giữa tiêu đề */
+}
+
+.sidebar ul {
+    list-style-type: none; /* Bỏ dấu đầu dòng */
+    padding: 0; /* Bỏ padding */
+}
+
+.sidebar li {
+    margin: 10px 0; /* Khoảng cách giữa các mục menu */
+    padding: 10px; /* Khoảng cách bên trong cho mục menu */
+    border-radius: 5px; /* Bo góc cho mục menu */
+    transition: background-color 0.3s ease; /* Hiệu ứng chuyển màu nền */
+}
+
+.sidebar li:hover {
+    cursor: pointer; /* Hiện con trỏ khi di chuột */
+    text-decoration: underline; /* Gạch chân khi di chuột */
+    background-color: #495057; /* Màu nền khi hover */
+}
+
+.sidebar li a {
+    color: white; /* Màu chữ cho link */
+    text-decoration: none; /* Bỏ gạch chân cho link */
+}
+
+.sidebar li a:hover {
+    text-decoration: underline; /* Gạch chân khi di chuột lên link */
+}

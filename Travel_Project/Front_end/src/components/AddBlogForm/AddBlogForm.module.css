@@ -1,0 +1,52 @@
+/* src/components/Admin/AddBlogForm/AddBlogForm.module.css */
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Khoảng cách giữa các trường */
+    max-width: 600px; /* Giới hạn chiều rộng tối đa của form */
+    margin: 0 auto; /* Căn giữa form */
+    padding: 20px; /* Padding cho form */
+    background-color: #f9f9f9; /* Màu nền cho form */
+    border-radius: 8px; /* Bo góc cho form */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Đổ bóng cho form */
+}
+
+input,
+input[type="file"],
+textarea,
+select {
+    padding: 12px; /* Padding cho các trường nhập liệu */
+    border: 1px solid #ccc; /* Đường viền cho trường nhập liệu */
+    border-radius: 4px; /* Bo góc cho trường nhập liệu */
+    transition: border-color 0.3s; /* Hiệu ứng chuyển đổi màu đường viền */
+}
+
+input[type="text"]:focus,
+input[type="file"]:focus,
+textarea:focus,
+select:focus {
+    border-color: #007bff; /* Đổi màu đường viền khi focus */
+    outline: none; /* Bỏ outline khi focus */
+}
+
+button {
+    padding: 12px 20px; /* Padding cho nút */
+    background-color: #007bff; /* Màu nền cho nút */
+    color: white; /* Màu chữ cho nút */
+    border: none; /* Bỏ đường viền cho nút */
+    border-radius: 4px; /* Bo góc cho nút */
+    cursor: pointer; /* Con trỏ khi hover qua nút */
+    font-size: 16px; /* Kích thước chữ cho nút */
+    transition: background-color 0.3s, transform 0.2s; /* Hiệu ứng chuyển đổi màu nền và hiệu ứng phóng to */
+}
+
+button:hover {
+    background-color: #0056b3; /* Màu nền khi hover qua nút */
+    transform: translateY(-2px); /* Di chuyển lên khi hover */
+}
+
+button:active {
+    transform: translateY(0); /* Đưa trở về khi nhấn */
+}
+

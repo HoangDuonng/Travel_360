@@ -1,0 +1,26 @@
+.adminPage {
+  display: flex; /* Sử dụng Flexbox cho bố cục */
+  background-color: #f8f9fa; /* Màu nền sáng cho trang */
+  min-height: 100vh; /* Chiều cao tối thiểu là 100% viewport */
+}
+
+.adminSidebar {
+  flex: 0 0 250px; /* Chiều rộng cố định cho sidebar */
+  background-color: #343a40; /* Màu nền cho sidebar */
+  color: white; /* Màu chữ trong sidebar */
+  padding: 20px; /* Padding cho sidebar */
+}
+
+.adminContent {
+  flex: 1; /* Chiều rộng tự động cho nội dung chính */
+  padding: 20px; /* Padding cho nội dung chính */
+  overflow-y: auto; /* Thêm cuộn dọc nếu nội dung quá lớn */
+}
+
+.formContainer {
+  background-color: white; /* Màu nền trắng cho form */
+  border-radius: 8px; /* Bo góc cho form */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Đổ bóng nhẹ cho form */
+  padding: 20px; /* Padding cho form */
+  margin-bottom: 20px; /* Khoảng cách dưới form */
+}
