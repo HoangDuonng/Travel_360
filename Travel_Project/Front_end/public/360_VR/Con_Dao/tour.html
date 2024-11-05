@@ -33,6 +33,24 @@
         background-color: #000000;
       }
     </style>
+    <audio id="myAudio" autoplay loop __idm_id__="409601">
+      <source src="./audio/bgsound.mp3" type="audio/mpeg" />
+      Your browser does not support the audio element.
+    </audio>
+    <script>
+      var x = document.getElementById("myAudio");
+      x.load();
+      x.volume = 1.0;
+
+      function playmusic() {
+        x.play();
+      }
+
+      function pausemusic() {
+        x.pause();
+      }
+
+    </script>
   </head>
   <body>
     <script src="tour.js">
@@ -59,7 +77,7 @@
           html5: "auto",
           mobilescale: 1.0,
           passQueryParameters: true,
-          consolelog: true,
+          // consolelog: true,
         });
       </script>
     </div>

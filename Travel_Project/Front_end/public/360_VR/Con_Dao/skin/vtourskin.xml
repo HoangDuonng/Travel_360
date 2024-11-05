@@ -359,6 +359,8 @@
 				<layer name="skin_btn_vr"        style="skin_base|skin_glow" crop="0|0|80|64"    align="center"      x="+146" y="0"  scale="0.5" onclick="webvr.enterVR();" visible="false" />
 				<layer name="skin_btn_fs"        style="skin_base|skin_glow" crop="0|576|64|64"  align="right"       x="90"   y="0"  scale="0.5" onclick="switch(fullscreen);" devices="fullscreensupport" />
 				<layer name="skin_btn_hide"      style="skin_base|skin_glow" crop="0|448|64|64"  align="right"       x="50"   y="0"  scale="0.5" onclick="skin_hideskin()" />
+				<layer name="skin_btn_toggle_voice" style="skin_base|skin_glow" crop="0|640|64|64"  align="right"    x="130"   y="0"  scale="0.5" onclick="toggle_voice()" />
+				<layer name="skin_btn_toggle_music" style="skin_base|skin_glow" crop="64|704|64|64"  align="left"    x="90"   y="0"  scale="0.5" onclick="toggle_music()" />
 				<layer name="skin_btn_show" type="container" bgcapture="true" align="bottom" width="100%" height="get:skin_settings.controlbar_height" y="calc:skin_settings.controlbar_height - skin_settings.controlbar_offset_closed" onclick="skin_showskin()" onhover="tween(alpha,1.0);" onout="tween(alpha,0.25);" ondown.touch="onhover();" onup.touch="onout();" visible="false" capture="false" alpha="0.0">
 					<layer name="skin_btn_show_icon" style="skin_base" crop="64|448|64|64" scale="0.5" align="bottom" y="2" enabled="false" />
 				</layer>
@@ -1163,4 +1165,48 @@
 		skin_deeplinking_update_url(1.0);
 	</action>
 
+	<!-- SOUND STUFF -->
+	<plugin api="soundinterface"
+        url ="/%CURRENTXML%/plugins/soundinterface.js"
+        preload="true"
+        rootpath=""
+        volume="0.5"
+        mute="false"
+        panningmodel="simple"
+        worldscale="1.0"
+        autopause="true"
+        autounlock="true"
+        />
+
+	<action name="toggle_voice">
+		if( get(sound[voice].paused) == null,
+			play_audio();
+			,
+			pausesoundtoggle(voice);
+			switch(crop, 0|640|64|64 , 64|640|64|64)
+		);
+	</action>
+
+	<action name="on_voice_finished">
+		set(layer[skin_btn_toggle_voice].crop, 0|640|64|64);
+		set(scene[get(xml.scene)].soundfinished, true);
+	</action>
+
+	<!-- MUSIC -->
+	<variables>
+    	<audio_playing>false</audio_playing>
+  	</variables>
+	<action name="play_music">
+		js(playmusic());
+		set(audio_playing, true);
+	</action>
+
+	<action name="pause_music">
+		js(pausemusic());
+		set(audio_playing, false);
+	</action>
+
+	<action name="toggle_music">
+		if(audio_playing, pause_music(), play_music());
+	</action>
 </krpano>

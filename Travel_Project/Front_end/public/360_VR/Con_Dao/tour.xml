@@ -146,11 +146,15 @@
 		);
 	</action>
 
+	<!-- SOUND -->
 
+	<action name="play_audio" autorun="onstart">
+		playsound(voice, '%CURRENTXML%/audio/gioithieucondao.mp3', 1, on_voice_finished());
+	</action>
 
 	<!--                 Trang Chủ                 -->
 	
-	<scene name="toan_canh" title="Toàn Cảnh Côn Đảo" onstart="" thumburl="panos/trang_chu/toan_canh/thumb.jpg" lat="" lng="" heading="">
+	<scene name="toan_canh" title="Toàn Cảnh Côn Đảo" onstart="" thumburl="panos/trang_chu/toan_canh/thumb.jpg" lat="" lng="" heading="" soundurl="%CURRENTXML%/audio/gioithieucondao.mp3" soundfinished="false">
 
 		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
 
